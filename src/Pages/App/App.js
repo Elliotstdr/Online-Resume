@@ -126,13 +126,24 @@ function App() {
               <br />
               Pour connaitre mon parcours et mes accomplissements professionnels
               je vous invite sur mon{" "}
-              <a href="https://www.linkedin.com/in/elliot-saint-andr%C3%A9-710093171/">
+              <a
+                href="https://www.linkedin.com/in/elliot-saint-andr%C3%A9-710093171/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Linkedin
               </a>
               . <br />
               Pour découvrir mes projets personnels vous êtes au bon endroit !
               Si toutefois le code source vous intéresse en route pour mon{" "}
-              <a href="https://github.com/Elliotstdr">GitHub</a>.
+              <a
+                href="https://github.com/Elliotstdr"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+              .
             </>
           }
         ></Bubble>

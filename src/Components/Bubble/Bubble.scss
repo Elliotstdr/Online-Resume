@@ -32,12 +32,10 @@
       margin: 0;
     }
     &__text {
-      font-weight: bold;
       visibility: hidden;
       opacity: 0;
       height: 0;
       transition: visibility 0s, height 0.5s, opacity 0.5s linear;
-      text-align: justify;
       a,
       i {
         color: orange;
