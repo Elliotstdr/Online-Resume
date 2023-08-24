@@ -38,6 +38,7 @@
       transition: visibility 0s, height 0.5s, opacity 0.5s linear;
       a,
       i {
+        font-weight: bold;
         color: orange;
       }
       span {
@@ -54,6 +55,9 @@
     transform: scale(1);
     transition: 0.3s all ease-in-out;
     border: 2px solid white;
+  }
+  &.first img {
+    border-color: orange;
   }
 }
 
