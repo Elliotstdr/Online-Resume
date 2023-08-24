@@ -1,0 +1,99 @@
+@import url("https://fonts.cdnfonts.com/css/gabriola");
+.App {
+  text-align: center;
+  background-color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    color: white;
+    margin-top: 0;
+    font-size: 5rem;
+    font-family: "Gabriola", sans-serif;
+  }
+  .bubbles {
+    margin: 1rem 0;
+    width: 1260px;
+    height: 300px;
+    position: relative;
+    .bubble {
+      &.second {
+        left: 320px;
+      }
+      &.third {
+        left: 640px;
+      }
+      &.fourth {
+        right: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1340px) {
+  .App {
+    h1 {
+      margin-bottom: 0 !important;
+    }
+    .bubbles {
+      width: 620px !important;
+      height: 620px !important;
+      .bubble {
+        &.second {
+          left: 320px;
+        }
+        &.third {
+          left: 0 !important;
+          top: 320px;
+        }
+        &.fourth {
+          top: 320px;
+          left: 320px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .App {
+    justify-content: unset;
+    h1 {
+      font-size: 2.5rem;
+      margin: 1rem 0 !important;
+    }
+    .bubbles {
+      width: 300px !important;
+      height: 300px !important;
+      .bubble {
+        &.second {
+          top: 320px;
+          left: 0 !important;
+        }
+        &.third {
+          top: 640px;
+        }
+        &.fourth {
+          top: 960px;
+          left: 0;
+        }
+        &.true {
+          left: -50px !important;
+          width: 400px;
+          height: 400px;
+          .bubble__content {
+            width: 300px;
+            &__text {
+              height: 400px;
+            }
+          }
+        }
+      }
+    }
+  }
+  html {
+    overflow-y: visible;
+  }
+}
