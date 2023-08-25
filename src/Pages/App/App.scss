@@ -79,15 +79,15 @@
           top: 960px;
           left: 0;
         }
-        &.true {
-          left: -50px !important;
-          width: 400px;
-          height: 400px;
-          .bubble__content {
-            width: 300px;
-            &__text {
-              height: 400px;
-            }
+        &.false {
+          img {
+            transform: scale(1);
+            filter: brightness(70%);
+          }
+          .bubble__content__text {
+            height: 0;
+            visibility: hidden;
+            opacity: 0;
           }
         }
       }
