@@ -134,7 +134,7 @@ function App() {
           content={
             <>
               Par curiosité pour NodeJS j'ai voulu apprendre ce language en
-              créant mon application de prise de notes, conçue pour à mes
+              créant mon application de prise de notes, conçue pour coller à mes
               besoins. <br />
               <br />
               Il a logiquement été développé en <i>NodeJS</i> coté server et en{" "}
