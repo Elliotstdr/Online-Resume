@@ -1,0 +1,93 @@
+.presentation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4rem;
+  h1 {
+    margin-top: 0;
+  }
+  h3 {
+    padding-left: 4rem;
+    margin: 2rem 0;
+  }
+  &__my-picture {
+    margin-right: 5rem;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-image: linear-gradient(
+      147deg,
+      rgb(250, 217, 97) 0%,
+      rgb(247, 107, 28) 100%
+    );
+    padding: 0.2rem;
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    border: 2px solid transparent;
+  }
+  &__text {
+    padding-left: 4rem;
+    color: rgb(255, 255, 255, 0.7);
+    text-align: left;
+    width: 70%;
+    font-family: "Sofia Pro", sans-serif;
+    position: relative;
+    display: block;
+  }
+  &__icons {
+    padding-left: 4rem;
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    .cv {
+      font-size: 75px;
+      background-image: linear-gradient(
+        147deg,
+        rgb(250, 217, 97) 0%,
+        rgb(247, 107, 28) 100%
+      );
+      background-clip: border-box;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+    a {
+      margin: 0 1rem;
+    }
+  }
+}
+
+@media (max-width: 1040px) {
+  .presentation {
+    &__my-picture {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .name {
+    padding-left: 3rem !important;
+  }
+  .presentation {
+    padding: 0 1rem;
+    &__text,
+    &__icons,
+    h3 {
+      padding-left: 1rem;
+    }
+    &__text {
+      width: 95%;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .presentation__icons {
+    justify-content: center;
+    padding: 0;
+    a {
+      margin: 0 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.bubbles.pro {
+  .bubble {
+    &:hover,
+    &.true {
+      .bubble__content__text {
+        height: 200px;
+      }
+    }
+  }
+}

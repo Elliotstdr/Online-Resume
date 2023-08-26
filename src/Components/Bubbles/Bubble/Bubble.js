@@ -12,7 +12,7 @@ const Bubble = (props) => {
       }
     >
       <div className="bubble__content">
-        <h1>{props.title}</h1>
+        <h3>{props.title}</h3>
         <div className="bubble__content__text">{props.content}</div>
       </div>
       <img src={props.image} alt="bubble_image" className="bubble__image" />

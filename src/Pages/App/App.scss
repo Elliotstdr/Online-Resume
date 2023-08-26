@@ -1,92 +1,38 @@
-@import url("https://fonts.cdnfonts.com/css/gabriola");
 @import url("https://fonts.cdnfonts.com/css/sofia-pro");
 
-$space: 40px;
-$bubble_size: 300px;
-
 .App {
-  text-align: center;
+  scroll-behavior: smooth;
+  text-align: left;
   background-color: black;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  .my-picture {
-    width: 150px;
-    height: 150px;
-    margin: 2rem 0;
-    border-radius: 50%;
-    border: 1px solid orange;
-  }
-  .presentation {
-    color: white;
-    text-align: left;
-    width: 70%;
-    font-family: "Sofia Pro", sans-serif;
-    position: relative;
-    display: block;
-    &::after {
-      position: absolute;
-      content: "";
-      height: 2px;
-      width: 50%;
-      background-color: white;
-      bottom: -2rem;
-      left: 50%;
-      transform: translate(-50%, 0);
-    }
-    a {
-      color: orange;
-    }
+  color: white;
+  font-family: "Sofia Pro", sans-serif;
+  h2 {
+    padding: 2rem 0 2rem 7rem;
   }
   h1 {
-    color: white;
-    margin-top: 0;
-    font-size: 5rem;
-    font-family: "Gabriola", sans-serif;
+    margin: 10rem 0 5rem 0;
+    font-size: 3rem;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    &:after {
+      position: absolute;
+      display: block;
+      content: "";
+      height: 2px;
+      width: 10rem;
+      background-color: white;
+      bottom: -1rem;
+      left: 5px;
+    }
   }
   .home_title {
     font-size: 3rem;
-    margin-bottom: 0;
-    margin-top: 2.5rem;
   }
-  .bubbles {
-    margin: 1rem 0;
-    width: 3 * $bubble_size + 2 * $space;
-    height: $bubble_size;
-    position: relative;
-    .bubble {
-      &.second {
-        left: $bubble_size + $space;
-      }
-      &.third {
-        left: 2 * ($bubble_size + $space);
-      }
-    }
-  }
-}
-
-@media (max-width: 1340px) {
-  .App {
-    h1 {
-      margin-bottom: 0 !important;
-    }
-    .bubbles {
-      width: 2 * $bubble_size + $space !important;
-      height: 2 * $bubble_size + $space !important;
-      .bubble {
-        &.second {
-          left: $bubble_size + $space;
-        }
-        &.third {
-          left: 0 !important;
-          top: $bubble_size + $space;
-        }
-      }
-    }
-  }
-  html {
-    overflow-y: visible;
+  .name {
+    font-size: 2rem;
   }
 }
 
@@ -94,32 +40,7 @@ $bubble_size: 300px;
   .App {
     justify-content: unset;
     h1 {
-      font-size: 2.5rem !important;
-      // margin: 1rem 0 !important;
-    }
-    .bubbles {
-      width: $bubble_size !important;
-      height: 3 * $bubble_size + 2 * $space !important;
-      .bubble {
-        &.second {
-          top: $bubble_size + $space;
-          left: 0 !important;
-        }
-        &.third {
-          top: 2 * ($bubble_size + $space);
-        }
-        &.false {
-          img {
-            transform: scale(1);
-            filter: brightness(70%);
-          }
-          .bubble__content__text {
-            height: 0;
-            visibility: hidden;
-            opacity: 0;
-          }
-        }
-      }
+      font-size: 2rem !important;
     }
   }
 }
