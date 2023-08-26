@@ -75,15 +75,13 @@ function App() {
           content={
             <>
               Ayant la volonté de cuisiner mieux et diversifié, tout en
-              partageant cela avec mes proches, j'ai décidé, après 6 mois en
-              tant que développeur, de créer ce site de partage de recettes de
-              cuisine. <br />
+              partageant cela avec mes proches, j'ai décidé de créer ce site de
+              partage de recettes de cuisine. <br />
               <br />
               Conçu en
               <i> Symfony6</i> et <i>ReactJS</i> il permet de créer son compte,
-              de le gérer, de consulter des recettes, d'en créer, d'en ajouter à
-              ses favoris mais aussi de générer sa liste de courses. Vous pouvez
-              retouver tout celà sur{" "}
+              de le gérer, de consulter des recettes, d'en créer mais aussi de
+              générer sa liste de courses. Vous pouvez retouver tout celà sur{" "}
               <a
                 href="https://shary-cooking.fr"
                 target="_blank"
@@ -136,9 +134,8 @@ function App() {
           content={
             <>
               Par curiosité pour NodeJS j'ai voulu apprendre ce language en
-              créant mon application de prise de notes. Conçu autour d'un modèle
-              de page {"->"} feuilles {"->"} notes déplaçables, c'est un outil
-              rapide qui colle à mes besoins. <br />
+              créant mon application de prise de notes, conçue pour à mes
+              besoins. <br />
               <br />
               Il a logiquement été développé en <i>NodeJS</i> coté server et en{" "}
               <i>ReactJS</i> pour le front. Le tout étant fait en{" "}
@@ -153,7 +150,8 @@ function App() {
               >
                 notesdemo.elliotstdr.fr
               </a>{" "}
-              avec l'email et le mot de passe suivant : fakeuser@mail.com / fake
+              avec l'email et le mot de passe suivant : <br />
+              fakeuser@mail.com / fake
             </>
           }
         ></Bubble>
