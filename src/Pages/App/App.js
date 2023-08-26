@@ -4,6 +4,7 @@ import bubble_lpr from "../../assets/bubble_lpr.jpg";
 import bubble_sc from "../../assets/bubble_sc.jpg";
 import bubble_notes from "../../assets/bubble_notes.jpg";
 import bubble_me from "../../assets/bubble_me.jpg";
+import cv from "../../assets/CV.pdf";
 import { useEffect, useRef, useState } from "react";
 
 function App() {
@@ -29,53 +30,47 @@ function App() {
 
   return (
     <div className="App">
+      <img className="my-picture" src={bubble_me} alt="" />
+      <span className="presentation">
+        Ingénieur en mécanique de formation j'ai décidé en 2022 de m'orienter
+        vers le développement web. Fort d'un cursus solide et d'expériences de
+        développeur sur différents languages en école et en entreprise, je me
+        suis rapidement senti bien dans cette nouvelle voie.
+        <br />
+        <br />
+        Pour connaitre mon parcours et mes accomplissements professionnels je
+        vous invite sur mon{" "}
+        <a
+          href="https://www.linkedin.com/in/elliot-saint-andr%C3%A9-710093171/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Linkedin
+        </a>{" "}
+        ou à consulter mon{" "}
+        <a href={cv} target="_blank" rel="noopener noreferrer">
+          CV
+        </a>
+        . <br />
+        Pour découvrir mes projets personnels vous êtes au bon endroit ! Si
+        toutefois le code source vous intéresse en route pour mon{" "}
+        <a
+          href="https://github.com/Elliotstdr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+        .
+      </span>
       <h1 className="home_title">Découvrez mes projets !</h1>
       <div className="bubbles" ref={wrapperRef}>
-        <Bubble
-          id={1}
-          isHovered={isHovered}
-          setIsHovered={setIsHovered}
-          image={bubble_me}
-          className="first"
-          title="Me découvrir"
-          content={
-            <>
-              Ingénieur en mécanique de formation j'ai décidé en 2022 de
-              m'orienté vers le développement web. Fort d'un cursus solide et
-              d'expérience de dév sur différents languages en école et en
-              entreprise, je me suis rapidement senti bien dans cette nouvelle
-              voie.
-              <br />
-              <br />
-              Pour connaitre mon parcours et mes accomplissements professionnels
-              je vous invite sur mon{" "}
-              <a
-                href="https://www.linkedin.com/in/elliot-saint-andr%C3%A9-710093171/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Linkedin
-              </a>
-              . <br />
-              Pour découvrir mes projets personnels vous êtes au bon endroit !
-              Si toutefois le code source vous intéresse en route pour mon{" "}
-              <a
-                href="https://github.com/Elliotstdr"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </a>
-              .
-            </>
-          }
-        ></Bubble>
         <Bubble
           id={2}
           isHovered={isHovered}
           setIsHovered={setIsHovered}
           image={bubble_sc}
-          className="second"
+          className="first"
           title="Shary Cooking"
           content={
             <>
@@ -107,7 +102,7 @@ function App() {
           isHovered={isHovered}
           setIsHovered={setIsHovered}
           image={bubble_lpr}
-          className="third"
+          className="second"
           title="La pause réconfort"
           content={
             <>
@@ -136,7 +131,7 @@ function App() {
           isHovered={isHovered}
           setIsHovered={setIsHovered}
           image={bubble_notes}
-          className="fourth"
+          className="third"
           title="Mes notes"
           content={
             <>
@@ -150,7 +145,7 @@ function App() {
               <i>Typescript</i> que je voulais apprendre également.
               <br />
               <br />
-              Vous pouvez aller testez la démo sur{" "}
+              Vous pouvez aller tester la démo sur{" "}
               <a
                 href="https://notesdemo.elliotstdr.fr"
                 target="_blank"

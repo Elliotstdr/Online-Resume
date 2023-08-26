@@ -1,4 +1,9 @@
 @import url("https://fonts.cdnfonts.com/css/gabriola");
+@import url("https://fonts.cdnfonts.com/css/sofia-pro");
+
+$space: 40px;
+$bubble_size: 300px;
+
 .App {
   text-align: center;
   background-color: black;
@@ -6,27 +11,56 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  .my-picture {
+    width: 150px;
+    height: 150px;
+    margin: 1.5rem 0;
+    border-radius: 50%;
+    border: 1px solid orange;
+  }
+  .presentation {
+    color: white;
+    text-align: left;
+    width: 70%;
+    font-family: "Sofia Pro", sans-serif;
+    position: relative;
+    display: block;
+    &::after {
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 50%;
+      background-color: white;
+      bottom: -2rem;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+    a {
+      color: orange;
+    }
+  }
   h1 {
     color: white;
     margin-top: 0;
     font-size: 5rem;
     font-family: "Gabriola", sans-serif;
   }
+  .home_title {
+    font-size: 3rem;
+    margin-bottom: 0;
+    margin-top: 2.5rem;
+  }
   .bubbles {
     margin: 1rem 0;
-    width: 1260px;
-    height: 300px;
+    width: 3 * $bubble_size + 2 * $space;
+    height: $bubble_size;
     position: relative;
     .bubble {
       &.second {
-        left: 320px;
+        left: $bubble_size + $space;
       }
       &.third {
-        left: 640px;
-      }
-      &.fourth {
-        right: 0;
+        left: 2 * ($bubble_size + $space);
       }
     }
   }
@@ -38,22 +72,21 @@
       margin-bottom: 0 !important;
     }
     .bubbles {
-      width: 620px !important;
-      height: 620px !important;
+      width: 2 * $bubble_size + $space !important;
+      height: 2 * $bubble_size + $space !important;
       .bubble {
         &.second {
-          left: 320px;
+          left: $bubble_size + $space;
         }
         &.third {
           left: 0 !important;
-          top: 320px;
-        }
-        &.fourth {
-          top: 320px;
-          left: 320px;
+          top: $bubble_size + $space;
         }
       }
     }
+  }
+  html {
+    overflow-y: visible;
   }
 }
 
@@ -61,23 +94,19 @@
   .App {
     justify-content: unset;
     h1 {
-      font-size: 2.5rem;
-      margin: 1rem 0 !important;
+      font-size: 2.5rem !important;
+      // margin: 1rem 0 !important;
     }
     .bubbles {
-      width: 300px !important;
-      height: 300px !important;
+      width: $bubble_size !important;
+      height: 3 * $bubble_size + 2 * $space !important;
       .bubble {
         &.second {
-          top: 320px;
+          top: $bubble_size + $space;
           left: 0 !important;
         }
         &.third {
-          top: 640px;
-        }
-        &.fourth {
-          top: 960px;
-          left: 0;
+          top: 2 * ($bubble_size + $space);
         }
         &.false {
           img {
@@ -92,8 +121,5 @@
         }
       }
     }
-  }
-  html {
-    overflow-y: visible;
   }
 }

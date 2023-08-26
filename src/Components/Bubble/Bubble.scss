@@ -17,6 +17,9 @@
       visibility: visible;
       opacity: 1;
     }
+    &.second .bubble__content__text {
+      height: 300px !important;
+    }
   }
   &__content {
     color: white;
@@ -55,9 +58,6 @@
     transform: scale(1);
     transition: 0.3s all ease-in-out;
     border: 2px solid white;
-  }
-  &.first img {
-    border-color: orange;
   }
 }
 
