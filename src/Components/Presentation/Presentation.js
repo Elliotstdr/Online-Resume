@@ -54,7 +54,7 @@ const Presentation = () => {
             />
           </a>
           <a href={cv} target="_blank" rel="noopener noreferrer" className="cv">
-            E
+            CV
           </a>
         </div>
       </div>
