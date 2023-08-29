@@ -1,19 +1,17 @@
 .skills {
-  padding: 0 4rem;
   &__container {
     display: flex;
     justify-content: space-evenly;
     &__item {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      max-width: 30%;
       .icon {
         width: 120px;
         height: 120px;
         display: flex;
         justify-content: center;
         align-items: center;
+        align-self: center;
       }
       span {
         font-size: 2rem;
@@ -23,8 +21,28 @@
         width: 70%;
         margin: 1rem 0;
         color: rgb(255, 255, 255, 0.7);
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         text-align: center;
+        width: fit-content;
+        [class^="devicon-"],
+        .pi {
+          opacity: 0;
+          width: fit-content;
+          display: flex;
+          margin: 0.5rem 0;
+          font-family: "Sofia Pro", sans-serif !important;
+          text-align: left;
+          font-size: 1.2rem;
+          &::before {
+            margin-right: 0.75rem;
+          }
+        }
+        .pi::before {
+          font-family: "primeicons" !important;
+        }
+        [class^="devicon-"]::before {
+          font-family: "devicon" !important;
+        }
       }
     }
   }
@@ -47,20 +65,15 @@
     flex-direction: column;
     align-items: center;
     &__item {
-      max-width: 50%;
-      &.first {
-        margin-bottom: 3rem;
+      width: 150px;
+      &.first,
+      &.second {
+        margin-bottom: 2rem;
       }
       &__name {
         width: 100%;
       }
     }
-  }
-}
-
-@media (max-width: 910px) {
-  .skills__container__item {
-    max-width: 80% !important;
   }
 }
 

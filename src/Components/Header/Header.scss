@@ -1,0 +1,77 @@
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  &__name {
+    background: linear-gradient(
+      to right,
+      hsl(0, 0%, 50%) 0,
+      hsl(0, 0%, 100%) 10%,
+      hsl(0, 0%, 50%) 20%
+    );
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+    font-size: 2rem;
+    padding: 2rem 0 2rem 4rem;
+  }
+  .p-steps {
+    width: 60%;
+    &-item {
+      opacity: 0.5;
+      &.p-steps-current {
+        opacity: 1 !important;
+        .p-steps-title {
+          color: white !important;
+        }
+      }
+    }
+    .p-menuitem-link {
+      background: black !important;
+      &:focus {
+        box-shadow: none !important;
+      }
+      .p-steps-number {
+        color: white !important;
+        background: black !important;
+        border: none !important;
+        width: 1.5rem;
+        height: 1rem !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+    align-items: unset;
+    margin-bottom: 4rem;
+    .p-steps {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    &__name {
+      padding-left: 2rem !important;
+    }
+    .p-steps-title {
+      font-size: 0.75rem !important;
+    }
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 245px;
+  }
+}

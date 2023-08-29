@@ -1,17 +1,18 @@
 @import url("https://fonts.cdnfonts.com/css/sofia-pro");
 
+body {
+  color: white;
+  font-family: "Sofia Pro", sans-serif;
+}
+
 .App {
-  scroll-behavior: smooth;
+  padding: 0 6rem;
   text-align: left;
   background-color: black;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  color: white;
-  font-family: "Sofia Pro", sans-serif;
-  h2 {
-    padding: 2rem 0 2rem 7rem;
-  }
+  position: relative;
   h1 {
     margin: 10rem 0 5rem 0;
     font-size: 3rem;
@@ -28,12 +29,6 @@
       left: 5px;
     }
   }
-  .home_title {
-    font-size: 3rem;
-  }
-  .name {
-    font-size: 2rem;
-  }
 }
 
 @media (max-width: 700px) {
@@ -42,5 +37,17 @@
     h1 {
       font-size: 2rem !important;
     }
+  }
+}
+
+@media (max-width: 600px) {
+  .App {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .App {
+    padding: 0 1rem;
   }
 }

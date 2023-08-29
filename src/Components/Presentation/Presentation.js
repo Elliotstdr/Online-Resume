@@ -58,7 +58,9 @@ const Presentation = () => {
           </a>
         </div>
       </div>
-      <img className="presentation__my-picture" src={me} alt="" />
+      <div className="img_container">
+        <img className="presentation__my-picture" src={me} alt="" />
+      </div>
     </div>
   );
 };

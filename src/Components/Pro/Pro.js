@@ -3,8 +3,9 @@ import "./Pro.scss";
 import RP from "../../assets/RP_2.jpg";
 import MT from "../../assets/MT_2.jpg";
 import PEPSISE from "../../assets/PEPSISE_2.jpg";
-import Bubble from "../Bubbles/Bubble/Bubble";
-import { BubbleTextPro } from "../Bubbles/BubbleText";
+import Bubble from "../Bubble/Bubble";
+import { BubbleTextPro } from "../Bubble/BubbleText";
+import anime from "animejs";
 
 const Pro = () => {
   const [isHovered, setIsHovered] = useState(null);
@@ -27,9 +28,43 @@ const Pro = () => {
   const wrapperRef = useRef(null);
   useOutsideAlerter(wrapperRef, () => setIsHovered(null));
 
+  const handleIntersection = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        anime({
+          targets: ".bubbles.pro .bubble",
+          opacity: 1,
+          easing: "linear",
+          duration: 1000,
+        });
+      }
+    });
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleIntersection, {
+      root: null,
+      rootMargin: "0px",
+      threshold: window.innerWidth > 750 ? 0.5 : 0.3,
+    });
+
+    if (wrapperRef.current) {
+      observer.observe(wrapperRef.current);
+    }
+
+    return () => {
+      if (wrapperRef.current) {
+        // eslint-disable-next-line
+        observer.unobserve(wrapperRef.current);
+      }
+    };
+  }, []);
+
   return (
     <>
-      <h1 className="bubbles__title">Mes projets pro</h1>
+      <h1 className="bubbles__title" id="pro">
+        Mes projets pro
+      </h1>
       <div className="bubbles pro" ref={wrapperRef}>
         <Bubble
           id={2}

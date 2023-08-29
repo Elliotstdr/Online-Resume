@@ -1,9 +1,6 @@
 $space: 80px;
-$bubble_size: 300px;
+$bubble_size: 330px;
 
-.bubbles__title {
-  margin-left: 4rem !important;
-}
 .bubbles {
   display: flex;
   align-self: center;
@@ -40,9 +37,6 @@ $bubble_size: 300px;
 }
 
 @media (max-width: 750px) {
-  .bubbles__title {
-    margin-left: 1rem !important;
-  }
   .bubbles,
   .bubbles.pro {
     width: $bubble_size !important;
@@ -67,5 +61,11 @@ $bubble_size: 300px;
         }
       }
     }
+  }
+}
+
+@media (max-width: 750px) {
+  .bubble__content {
+    width: 100% !important;
   }
 }

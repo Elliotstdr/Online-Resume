@@ -1,0 +1,26 @@
+.scrollTop {
+  z-index: 10000;
+  cursor: pointer;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: none;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid white;
+  svg {
+    font-size: 2rem;
+  }
+  &:hover {
+    background-color: black;
+    svg {
+      color: white;
+    }
+  }
+}
