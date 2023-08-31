@@ -35,7 +35,7 @@ const Perso = () => {
           targets: ".bubbles.perso .bubble",
           opacity: 1,
           easing: "linear",
-          duration: 1000,
+          duration: 800,
         });
       }
     });

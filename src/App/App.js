@@ -7,10 +7,12 @@ import Footer from "../Components/Footer/Footer";
 import Pro from "../Components/Pro/Pro";
 import Header from "../Components/Header/Header";
 import ScrollTopBtn from "../Components/ScrollTopBtn/ScrollTopBtn";
+import Netflix from "../Components/Netflix/Netflix";
 
 const App = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [visibleButton, setVisibleButton] = useState(false);
+  const [visibleNetflix, setVisibleNetflix] = useState(true);
 
   window.addEventListener("scroll", () => {
     setVisibleButton(window.scrollY > 300);
@@ -21,11 +23,18 @@ const App = () => {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+    setTimeout(() => {
+      const app = document.getElementById("App");
+      app.style.overflow = "unset";
+      app.style.height = "unset";
+      setVisibleNetflix(false);
+    }, 5000 * 0.7);
   }, []);
 
   return (
     <>
       <div className="App" id="App">
+        {visibleNetflix && <Netflix></Netflix>}
         <Header
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}

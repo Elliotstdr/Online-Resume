@@ -1,0 +1,565 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  --main-color: #ffa801;
+}
+$bg-color: #000000;
+$duration: 0.7s;
+
+.App {
+  height: 100vh;
+  overflow: hidden;
+}
+#container {
+  animation: NetflixVisibility 1.8s 2.1s ease-in-out;
+  position: absolute;
+  left: 0;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: $bg-color;
+  overflow: hidden;
+
+  netflixintro {
+    display: block;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    animation-name: zoom-in;
+    animation-delay: 0.5s;
+    animation-duration: 3.5 * $duration;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    background-size: 4000px;
+    background-position: -1950px 0;
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      background-color: $bg-color;
+      width: 150%;
+      height: 30%;
+      left: -25%;
+      bottom: -27%;
+      border-radius: 50%;
+      z-index: 5;
+      transform-origin: left center;
+      background-size: 4000px;
+      background-position: -1950px 0;
+    }
+    &[letter="E"] {
+      transform-origin: 30% center;
+      .helper-1 {
+        z-index: 1;
+        width: 19.5%;
+        height: 100%;
+        background-color: rgba(var(--main-color), 1);
+        left: 21%;
+        top: 0;
+        transform: rotate(180deg);
+        animation-name: fading-lumieres-box;
+        animation-duration: 2 * $duration;
+        animation-delay: 0.6s;
+        animation-fill-mode: forwards;
+        .effect-brush {
+          animation-name: brush-moving;
+          animation-duration: 2.5 * $duration;
+          animation-fill-mode: forwards;
+          animation-delay: 1.2s;
+          [class*="fur-"] {
+            bottom: 0;
+            height: 40%;
+          }
+        }
+      }
+      .helper-2 {
+        width: 17.5%;
+        height: 50%;
+        left: 38%;
+        top: -49px;
+        transform: rotate(270deg);
+        overflow: hidden;
+        .effect-brush {
+          animation-name: brush-moving;
+          animation-duration: 2 * $duration;
+          animation-fill-mode: forwards;
+          animation-delay: 0.8s;
+        }
+      }
+      .helper-3 {
+        width: 17%;
+        height: 39%;
+        left: 33%;
+        top: 29%;
+        transform: rotate(-90deg);
+        box-shadow: 0px 0px 35px -12px rgba(0, 0, 0, 0.4);
+        overflow: hidden;
+        animation-name: fading-out;
+        animation-duration: 2 * $duration;
+        animation-fill-mode: forwards;
+        animation-delay: 1s;
+        .effect-brush {
+          animation-name: brush-moving;
+          animation-duration: 2 * $duration;
+          animation-fill-mode: forwards;
+          animation-delay: 0.6s;
+        }
+      }
+      .helper-4 {
+        width: 17.5%;
+        height: 50%;
+        left: 38%;
+        top: 196px;
+        transform: rotate(270deg);
+        overflow: hidden;
+        .effect-brush {
+          animation-name: brush-moving;
+          animation-duration: 2 * $duration;
+          animation-fill-mode: forwards;
+          animation-delay: 0.4s;
+          animation-delay: 0.5s;
+        }
+      }
+    }
+    .helper-1 {
+      box-shadow: 1px 1px 10px 2px var(--main-color);
+    }
+    [class*="helper-"] {
+      position: absolute;
+      .effect-brush {
+        position: absolute;
+        width: 100%;
+        height: 300%;
+        top: 0;
+        overflow: hidden;
+        &::before {
+          display: block;
+          content: "";
+          position: absolute;
+          background-color: var(--main-color);
+          width: 100%;
+          height: 70%;
+          box-shadow: 0px 0px 29px 24px var(--main-color);
+        }
+        [class*="fur-"] {
+          display: block;
+          position: absolute;
+          bottom: 10%;
+          height: 30%;
+        }
+        .fur-1 {
+          left: 0%;
+          width: 3.8%;
+          background: linear-gradient(
+            to bottom,
+            var(--main-color) 0%,
+            var(--main-color) 15%,
+            rgba(0, 0, 0, 0) 81%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+        .fur-2 {
+          left: 3.8%;
+          width: 2.8%;
+          background: linear-gradient(
+            to bottom,
+            var(--main-color) 0%,
+            var(--main-color) 10%,
+            rgba(0, 0, 0, 0) 62%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+        .fur-3 {
+          left: 6.6%;
+          width: 4.8%;
+          background: linear-gradient(
+            to bottom,
+            var(--main-color) 0%,
+            var(--main-color) 37%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+        .fur-4 {
+          left: 11.4%;
+          width: 4%;
+          background: linear-gradient(
+            to bottom,
+            var(--main-color) 0%,
+            var(--main-color) 23%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+        .fur-5 {
+          left: 15.4%;
+          width: 4%;
+          background: linear-gradient(
+            to bottom,
+            var(--main-color) 0%,
+            var(--main-color) 15%,
+            rgba(0, 0, 0, 0) 86%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+        .fur-6 {
+          left: 19.4%;
+          width: 2.5%;
+          background: linear-gradient(
+            to bottom,
+            var(--main-color) 0%,
+            var(--main-color) 27%,
+            rgba(0, 0, 0, 0) 89%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+        .fur-7 {
+          left: 21.9%;
+          width: 4%;
+          background: linear-gradient(
+            to bottom,
+            var(--main-color) 0%,
+            var(--main-color) 20%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+        .fur-8 {
+          left: 25.9%;
+          width: 2%;
+          background: linear-gradient(
+            to bottom,
+            var(--main-color) 0%,
+            var(--main-color) 30%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+        .fur-9 {
+          left: 27.9%;
+          width: 4%;
+          background: linear-gradient(
+            to bottom,
+            var(--main-color) 0%,
+            var(--main-color) 35%,
+            rgba(0, 0, 0, 0) 95%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+        .fur-10 {
+          left: 31.9%;
+          width: 3.5%;
+          background: linear-gradient(
+            to bottom,
+            var(--main-color) 0%,
+            var(--main-color) 39%,
+            rgba(0, 0, 0, 0) 95%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+        .fur-11 {
+          left: 35.4%;
+          width: 2%;
+          background: linear-gradient(
+            to bottom,
+            var(--main-color) 0%,
+            var(--main-color) 34%,
+            rgba(0, 0, 0, 0) 95%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+        .fur-12 {
+          left: 37.4%;
+          width: 2.6%;
+          background: linear-gradient(
+            to bottom,
+            var(--main-color) 0%,
+            var(--main-color) 22%,
+            rgba(0, 0, 0, 0) 95%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+        .fur-13 {
+          left: 40%;
+          width: 6%;
+          background: linear-gradient(
+            to bottom,
+            var(--main-color) 0%,
+            var(--main-color) 47%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+        .fur-14 {
+          left: 46%;
+          width: 2%;
+          background: linear-gradient(
+            to bottom,
+            var(--main-color) 0%,
+            var(--main-color) 36%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+        .fur-15 {
+          left: 48%;
+          width: 5.5%;
+          background: linear-gradient(
+            to bottom,
+            var(--main-color) 0%,
+            var(--main-color) 29%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+        .fur-16 {
+          left: 53.5%;
+          width: 3%;
+          background: linear-gradient(
+            to bottom,
+            var(--main-color) 0%,
+            var(--main-color) 39%,
+            rgba(0, 0, 0, 0) 95%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+        .fur-17 {
+          left: 56.5%;
+          width: 4.1%;
+          background: linear-gradient(
+            to bottom,
+            var(--main-color) 0%,
+            var(--main-color) 45%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+        .fur-18 {
+          left: 60.6%;
+          width: 2.4%;
+          background: linear-gradient(
+            to bottom,
+            var(--main-color) 0%,
+            var(--main-color) 34%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+        .fur-19 {
+          left: 63%;
+          width: 4%;
+          background: linear-gradient(
+            to bottom,
+            var(--main-color) 0%,
+            var(--main-color) 47%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+        .fur-20 {
+          left: 67%;
+          width: 1.5%;
+          background: linear-gradient(
+            to bottom,
+            var(--main-color) 0%,
+            var(--main-color) 27%,
+            rgba(0, 0, 0, 0) 95%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+        .fur-21 {
+          left: 68.5%;
+          width: 2.8%;
+          background: linear-gradient(
+            to bottom,
+            var(--main-color) 0%,
+            var(--main-color) 37%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+        .fur-22 {
+          left: 71.3%;
+          width: 2.3%;
+          background: linear-gradient(
+            to bottom,
+            var(--main-color) 0%,
+            var(--main-color) 9%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+        .fur-23 {
+          left: 73.6%;
+          width: 2.2%;
+          background: linear-gradient(
+            to bottom,
+            var(--main-color) 0%,
+            var(--main-color) 28%,
+            rgba(0, 0, 0, 0) 92%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+        .fur-24 {
+          left: 75.8%;
+          width: 1%;
+          background: linear-gradient(
+            to bottom,
+            var(--main-color) 0%,
+            var(--main-color) 37%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+        .fur-25 {
+          left: 76.8%;
+          width: 2.1%;
+          background: linear-gradient(
+            to bottom,
+            var(--main-color) 0%,
+            var(--main-color) 28%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+        .fur-26 {
+          left: 78.9%;
+          width: 4.1%;
+          background: linear-gradient(
+            to bottom,
+            var(--main-color) 0%,
+            var(--main-color) 34%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+        .fur-27 {
+          left: 83%;
+          width: 2.5%;
+          background: linear-gradient(
+            to bottom,
+            var(--main-color) 0%,
+            var(--main-color) 21%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+        .fur-28 {
+          left: 85.5%;
+          width: 4.5%;
+          background: linear-gradient(
+            to bottom,
+            var(--main-color) 0%,
+            var(--main-color) 39%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+        .fur-29 {
+          left: 90%;
+          width: 2.8%;
+          background: linear-gradient(
+            to bottom,
+            var(--main-color) 0%,
+            var(--main-color) 30%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+        .fur-30 {
+          left: 92.8%;
+          width: 3.5%;
+          background: linear-gradient(
+            to bottom,
+            var(--main-color) 0%,
+            var(--main-color) 19%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+        .fur-31 {
+          left: 96.3%;
+          width: 3.7%;
+          background: linear-gradient(
+            to bottom,
+            var(--main-color) 0%,
+            var(--main-color) 37%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+      }
+    }
+  }
+}
+@keyframes brush-moving {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes fading-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes lumieres-moving-right {
+  0% {
+    transform: translate(0);
+  }
+  40% {
+    transform: translate(-10px) scaleX(1);
+  }
+  50% {
+    transform: translate(-60px);
+  }
+  100% {
+    transform: translate(-120px) scaleX(3);
+  }
+}
+
+@keyframes lumieres-moving-left {
+  0% {
+    transform: translate(0);
+  }
+  40% {
+    transform: translate(10px) scaleX(1);
+  }
+  50% {
+    transform: translate(60px);
+  }
+  100% {
+    transform: translate(120px) scaleX(3);
+  }
+}
+
+@keyframes zoom-in {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(25);
+  }
+}
+
+@keyframes showing-lumieres {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fading-lumieres-box {
+  0% {
+    background-color: rgba(var(--main-color), 0.5);
+  }
+  100% {
+    background-color: rgba(var(--main-color), 0);
+  }
+}
+
+@keyframes NetflixVisibility {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

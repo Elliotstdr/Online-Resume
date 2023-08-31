@@ -1,6 +1,7 @@
 import React from "react";
 import "./Header.scss";
 import { Steps } from "primereact/steps";
+import me from "../../assets/me.jpg";
 
 const Header = (props) => {
   const goTo = (id) => {
@@ -31,6 +32,13 @@ const Header = (props) => {
 
   return (
     <div className="header">
+      <div className="header__mobile">
+        <img className="header__my-picture" src={me} alt="" />
+        <h2 className="name">
+          Elliot <br />
+          Saint-André
+        </h2>
+      </div>
       <h2 className="header__name">
         Elliot <br />
         Saint-André

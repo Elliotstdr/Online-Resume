@@ -35,7 +35,7 @@ const Pro = () => {
           targets: ".bubbles.pro .bubble",
           opacity: 1,
           easing: "linear",
-          duration: 1000,
+          duration: 800,
         });
       }
     });
