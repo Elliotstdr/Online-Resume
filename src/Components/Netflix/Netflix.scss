@@ -71,9 +71,9 @@ $duration: 0.7s;
         animation-fill-mode: forwards;
         .effect-brush {
           animation-name: brush-moving;
-          animation-duration: 2.5 * $duration;
+          animation-duration: 4 * $duration;
           animation-fill-mode: forwards;
-          animation-delay: 1.2s;
+          animation-delay: 0.5s;
           [class*="fur-"] {
             bottom: 0;
             height: 40%;
@@ -130,7 +130,8 @@ $duration: 0.7s;
       }
     }
     .helper-1 {
-      box-shadow: 1px 1px 10px 2px var(--main-color);
+      box-shadow: 1px 1px 10px 1px var(--main-color),
+        -1px -1px 10px 1px var(--main-color);
     }
     [class*="helper-"] {
       position: absolute;
@@ -480,6 +481,19 @@ $duration: 0.7s;
     }
   }
 }
+
+@media (max-width: 900px) {
+  #container netflixintro {
+    animation-name: zoom-in-laptop;
+  }
+}
+
+@media (max-width: 500px) {
+  #container netflixintro {
+    animation-name: zoom-in-mobile;
+  }
+}
+
 @keyframes brush-moving {
   0% {
     transform: translateY(0);
@@ -533,7 +547,25 @@ $duration: 0.7s;
     transform: scale(1);
   }
   100% {
-    transform: scale(25);
+    transform: scale(35);
+  }
+}
+
+@keyframes zoom-in-laptop {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(20);
+  }
+}
+
+@keyframes zoom-in-mobile {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(10);
   }
 }
 
