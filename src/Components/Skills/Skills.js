@@ -66,13 +66,13 @@ const Skills = () => {
           <span>Dév. Front End</span>
           <div className="skills__container__item__name">
             <div className="devicon-react-plain">React</div>
+            <div className="devicon-typescript-plain">TypeScript</div>
+            <div className="devicon-redux-plain">Redux</div>
             <div className="devicon-html5-plain">HTML</div>
             <div className="devicon-css3-plain">CSS</div>
             <div className="devicon-javascript-plain">JS Vanilla</div>
             <div className="devicon-jquery-plain">JQuery</div>
-            <div className="devicon-typescript-plain">TypeScript</div>
             <div className="pi pi-check-circle">Twig</div>
-            <div className="devicon-redux-plain">Redux</div>
             <div className="pi pi-check-circle">Responsive</div>
           </div>
         </div>
@@ -85,12 +85,12 @@ const Skills = () => {
             <div className="devicon-symfony-original">Symfony</div>
             <div className="devicon-php-plain">PHP</div>
             <div className="devicon-nodejs-plain">NodeJS</div>
+            <div className="devicon-git-plain">Git</div>
+            <div className="devicon-docker-plain">Docker</div>
             <div className="devicon-python-plain">Python</div>
             <div className="pi pi-check-circle">Fortran</div>
             <div className="devicon-mysql-plain">SQL</div>
             <div className="devicon-mongodb-plain">MongoDB</div>
-            <div className="devicon-git-plain">Git</div>
-            <div className="devicon-docker-plain">Docker</div>
           </div>
         </div>
         <div className="skills__container__item third">
