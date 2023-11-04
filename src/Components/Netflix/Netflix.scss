@@ -1,3 +1,25 @@
+@mixin BG($first, $second, $third) {
+  background: linear-gradient(
+    to bottom,
+    var(--main-color) 0%,
+    var(--main-color) $first,
+    rgba(0, 0, 0, 0) 100%
+  );
+  left: $second;
+  width: $third;
+}
+@mixin BG2($first, $second, $third, $fourth) {
+  background: linear-gradient(
+    to bottom,
+    var(--main-color) 0%,
+    var(--main-color) $first,
+    rgba(0, 0, 0, 0) $second,
+    rgba(0, 0, 0, 0) 100%
+  );
+  left: $third;
+  width: $fourth;
+}
+
 html,
 body {
   margin: 0;
@@ -33,11 +55,7 @@ $duration: 0.7s;
     width: 300px;
     height: 300px;
     overflow: hidden;
-    animation-name: zoom-in;
-    animation-delay: 0.5s;
-    animation-duration: 3.5 * $duration;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
+    animation: zoom-in 3.5 * $duration ease-in 0.5s forwards;
     background-size: 4000px;
     background-position: -1950px 0;
     &::before {
@@ -67,10 +85,7 @@ $duration: 0.7s;
         transform: rotate(180deg);
         animation: input-shadow 3.5 * $duration ease-in 0.5s forwards;
         .effect-brush {
-          animation-name: brush-moving;
-          animation-duration: 4 * $duration;
-          animation-fill-mode: forwards;
-          animation-delay: 0.5s;
+          animation: brush-moving 4 * $duration ease 0.5s forwards;
           [class*="fur-"] {
             bottom: 0;
             height: 40%;
@@ -85,10 +100,7 @@ $duration: 0.7s;
         transform: rotate(270deg);
         overflow: hidden;
         .effect-brush {
-          animation-name: brush-moving;
-          animation-duration: 2 * $duration;
-          animation-fill-mode: forwards;
-          animation-delay: 0.8s;
+          animation: brush-moving 2 * $duration ease 0.8s forwards;
         }
       }
       .helper-3 {
@@ -99,15 +111,9 @@ $duration: 0.7s;
         transform: rotate(-90deg);
         box-shadow: 0px 0px 35px -12px rgba(0, 0, 0, 0.4);
         overflow: hidden;
-        animation-name: fading-out;
-        animation-duration: 2 * $duration;
-        animation-fill-mode: forwards;
-        animation-delay: 1s;
+        animation: fading-out 2 * $duration ease 1s forwards;
         .effect-brush {
-          animation-name: brush-moving;
-          animation-duration: 2 * $duration;
-          animation-fill-mode: forwards;
-          animation-delay: 0.6s;
+          animation: brush-moving 2 * $duration ease 0.6s forwards;
         }
       }
       .helper-4 {
@@ -118,11 +124,7 @@ $duration: 0.7s;
         transform: rotate(270deg);
         overflow: hidden;
         .effect-brush {
-          animation-name: brush-moving;
-          animation-duration: 2 * $duration;
-          animation-fill-mode: forwards;
-          animation-delay: 0.4s;
-          animation-delay: 0.5s;
+          animation: brush-moving 2 * $duration ease 0.5s forwards;
         }
       }
     }
@@ -150,325 +152,97 @@ $duration: 0.7s;
           height: 30%;
         }
         .fur-1 {
-          left: 0%;
-          width: 3.8%;
-          background: linear-gradient(
-            to bottom,
-            var(--main-color) 0%,
-            var(--main-color) 15%,
-            rgba(0, 0, 0, 0) 81%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          @include BG2(15%, 81%, 0%, 3.8%);
         }
         .fur-2 {
-          left: 3.8%;
-          width: 2.8%;
-          background: linear-gradient(
-            to bottom,
-            var(--main-color) 0%,
-            var(--main-color) 10%,
-            rgba(0, 0, 0, 0) 62%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          @include BG2(10%, 62%, 3.8%, 2.8%);
         }
         .fur-3 {
-          left: 6.6%;
-          width: 4.8%;
-          background: linear-gradient(
-            to bottom,
-            var(--main-color) 0%,
-            var(--main-color) 37%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          @include BG(37%, 6.6%, 4.8%);
         }
         .fur-4 {
-          left: 11.4%;
-          width: 4%;
-          background: linear-gradient(
-            to bottom,
-            var(--main-color) 0%,
-            var(--main-color) 23%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          @include BG(23%, 11.4%, 4%);
         }
         .fur-5 {
-          left: 15.4%;
-          width: 4%;
-          background: linear-gradient(
-            to bottom,
-            var(--main-color) 0%,
-            var(--main-color) 15%,
-            rgba(0, 0, 0, 0) 86%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          @include BG2(15%, 86%, 15.4%, 4%);
         }
         .fur-6 {
-          left: 19.4%;
-          width: 2.5%;
-          background: linear-gradient(
-            to bottom,
-            var(--main-color) 0%,
-            var(--main-color) 27%,
-            rgba(0, 0, 0, 0) 89%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          @include BG2(27%, 89%, 19.4%, 2.5%);
         }
         .fur-7 {
-          left: 21.9%;
-          width: 4%;
-          background: linear-gradient(
-            to bottom,
-            var(--main-color) 0%,
-            var(--main-color) 20%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          @include BG(20%, 21.9%, 4%);
         }
         .fur-8 {
-          left: 25.9%;
-          width: 2%;
-          background: linear-gradient(
-            to bottom,
-            var(--main-color) 0%,
-            var(--main-color) 30%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          @include BG(30%, 25.9%, 2%);
         }
         .fur-9 {
-          left: 27.9%;
-          width: 4%;
-          background: linear-gradient(
-            to bottom,
-            var(--main-color) 0%,
-            var(--main-color) 35%,
-            rgba(0, 0, 0, 0) 95%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          @include BG2(35%, 95%, 27.9%, 4%);
         }
         .fur-10 {
-          left: 31.9%;
-          width: 3.5%;
-          background: linear-gradient(
-            to bottom,
-            var(--main-color) 0%,
-            var(--main-color) 39%,
-            rgba(0, 0, 0, 0) 95%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          @include BG2(39%, 95%, 31.9%, 3.5%);
         }
         .fur-11 {
-          left: 35.4%;
-          width: 2%;
-          background: linear-gradient(
-            to bottom,
-            var(--main-color) 0%,
-            var(--main-color) 34%,
-            rgba(0, 0, 0, 0) 95%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          @include BG2(34%, 95%, 35.4%, 2%);
         }
         .fur-12 {
-          left: 37.4%;
-          width: 2.6%;
-          background: linear-gradient(
-            to bottom,
-            var(--main-color) 0%,
-            var(--main-color) 22%,
-            rgba(0, 0, 0, 0) 95%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          @include BG2(22%, 95%, 37.4%, 2.6%);
         }
         .fur-13 {
-          left: 40%;
-          width: 6%;
-          background: linear-gradient(
-            to bottom,
-            var(--main-color) 0%,
-            var(--main-color) 47%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          @include BG(47%, 40%, 6%);
         }
         .fur-14 {
-          left: 46%;
-          width: 2%;
-          background: linear-gradient(
-            to bottom,
-            var(--main-color) 0%,
-            var(--main-color) 36%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          @include BG(36%, 46%, 2%);
         }
         .fur-15 {
-          left: 48%;
-          width: 5.5%;
-          background: linear-gradient(
-            to bottom,
-            var(--main-color) 0%,
-            var(--main-color) 29%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          @include BG(29%, 48%, 5.5%);
         }
         .fur-16 {
-          left: 53.5%;
-          width: 3%;
-          background: linear-gradient(
-            to bottom,
-            var(--main-color) 0%,
-            var(--main-color) 39%,
-            rgba(0, 0, 0, 0) 95%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          @include BG2(39%, 95%, 53.5%, 3%);
         }
         .fur-17 {
-          left: 56.5%;
-          width: 4.1%;
-          background: linear-gradient(
-            to bottom,
-            var(--main-color) 0%,
-            var(--main-color) 45%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          @include BG(45%, 56.5%, 4.1%);
         }
         .fur-18 {
-          left: 60.6%;
-          width: 2.4%;
-          background: linear-gradient(
-            to bottom,
-            var(--main-color) 0%,
-            var(--main-color) 34%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          @include BG(34%, 60.6%, 2.4%);
         }
         .fur-19 {
-          left: 63%;
-          width: 4%;
-          background: linear-gradient(
-            to bottom,
-            var(--main-color) 0%,
-            var(--main-color) 47%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          @include BG(47%, 63%, 4%);
         }
         .fur-20 {
-          left: 67%;
-          width: 1.5%;
-          background: linear-gradient(
-            to bottom,
-            var(--main-color) 0%,
-            var(--main-color) 27%,
-            rgba(0, 0, 0, 0) 95%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          @include BG2(27%, 95%, 67%, 1.5%);
         }
         .fur-21 {
-          left: 68.5%;
-          width: 2.8%;
-          background: linear-gradient(
-            to bottom,
-            var(--main-color) 0%,
-            var(--main-color) 37%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          @include BG(37%, 68.5%, 2.8%);
         }
         .fur-22 {
-          left: 71.3%;
-          width: 2.3%;
-          background: linear-gradient(
-            to bottom,
-            var(--main-color) 0%,
-            var(--main-color) 9%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          @include BG(9%, 71.3%, 2.3%);
         }
         .fur-23 {
-          left: 73.6%;
-          width: 2.2%;
-          background: linear-gradient(
-            to bottom,
-            var(--main-color) 0%,
-            var(--main-color) 28%,
-            rgba(0, 0, 0, 0) 92%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          @include BG2(28%, 92%, 73.6%, 2.2%);
         }
         .fur-24 {
-          left: 75.8%;
-          width: 1%;
-          background: linear-gradient(
-            to bottom,
-            var(--main-color) 0%,
-            var(--main-color) 37%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          @include BG(37%, 75.8%, 1%);
         }
         .fur-25 {
-          left: 76.8%;
-          width: 2.1%;
-          background: linear-gradient(
-            to bottom,
-            var(--main-color) 0%,
-            var(--main-color) 28%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          @include BG(28%, 76.8%, 2.1%);
         }
         .fur-26 {
-          left: 78.9%;
-          width: 4.1%;
-          background: linear-gradient(
-            to bottom,
-            var(--main-color) 0%,
-            var(--main-color) 34%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          @include BG(34%, 78.9%, 4.1%);
         }
         .fur-27 {
-          left: 83%;
-          width: 2.5%;
-          background: linear-gradient(
-            to bottom,
-            var(--main-color) 0%,
-            var(--main-color) 21%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          @include BG(21%, 83%, 2.5%);
         }
         .fur-28 {
-          left: 85.5%;
-          width: 4.5%;
-          background: linear-gradient(
-            to bottom,
-            var(--main-color) 0%,
-            var(--main-color) 39%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          @include BG(39%, 85.5%, 4.5%);
         }
         .fur-29 {
-          left: 90%;
-          width: 2.8%;
-          background: linear-gradient(
-            to bottom,
-            var(--main-color) 0%,
-            var(--main-color) 30%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          @include BG(30%, 90%, 2.8%);
         }
         .fur-30 {
-          left: 92.8%;
-          width: 3.5%;
-          background: linear-gradient(
-            to bottom,
-            var(--main-color) 0%,
-            var(--main-color) 19%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          @include BG(19%, 92.8%, 3.5%);
         }
         .fur-31 {
-          left: 96.3%;
-          width: 3.7%;
-          background: linear-gradient(
-            to bottom,
-            var(--main-color) 0%,
-            var(--main-color) 37%,
-            rgba(0, 0, 0, 0) 100%
-          );
+          @include BG(37%, 96.3%, 3.7%);
         }
       }
     }
@@ -476,12 +250,6 @@ $duration: 0.7s;
 }
 
 @media (max-width: 900px) {
-  #container netflixintro {
-    animation-name: zoom-in-laptop;
-  }
-}
-
-@media (max-width: 500px) {
   #container netflixintro {
     animation-name: zoom-in-mobile;
   }
@@ -495,7 +263,6 @@ $duration: 0.7s;
     transform: translateY(-100%);
   }
 }
-
 @keyframes fading-out {
   0% {
     opacity: 1;
@@ -504,37 +271,6 @@ $duration: 0.7s;
     opacity: 0;
   }
 }
-
-@keyframes lumieres-moving-right {
-  0% {
-    transform: translate(0);
-  }
-  40% {
-    transform: translate(-10px) scaleX(1);
-  }
-  50% {
-    transform: translate(-60px);
-  }
-  100% {
-    transform: translate(-120px) scaleX(3);
-  }
-}
-
-@keyframes lumieres-moving-left {
-  0% {
-    transform: translate(0);
-  }
-  40% {
-    transform: translate(10px) scaleX(1);
-  }
-  50% {
-    transform: translate(60px);
-  }
-  100% {
-    transform: translate(120px) scaleX(3);
-  }
-}
-
 @keyframes zoom-in {
   0% {
     transform: scale(1);
@@ -543,7 +279,6 @@ $duration: 0.7s;
     transform: scale(35);
   }
 }
-
 @keyframes input-shadow {
   0% {
     box-shadow: none;
@@ -557,7 +292,7 @@ $duration: 0.7s;
       -1px -1px 5px 1px var(--main-color);
   }
 }
-@keyframes zoom-in-laptop {
+@keyframes zoom-in-mobile {
   0% {
     transform: scale(1);
   }
@@ -565,34 +300,6 @@ $duration: 0.7s;
     transform: scale(20);
   }
 }
-
-@keyframes zoom-in-mobile {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(10);
-  }
-}
-
-@keyframes showing-lumieres {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fading-lumieres-box {
-  0% {
-    background-color: rgba(var(--main-color), 0.5);
-  }
-  100% {
-    background-color: rgba(var(--main-color), 0);
-  }
-}
-
 @keyframes NetflixVisibility {
   0% {
     opacity: 1;

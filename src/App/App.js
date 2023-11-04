@@ -27,8 +27,10 @@ const App = () => {
       const app = document.getElementById("App");
       app.style.overflow = "unset";
       app.style.height = "unset";
+    }, 4000 * 0.7);
+    setTimeout(() => {
       setVisibleNetflix(false);
-    }, 4500 * 0.7);
+    }, 5000 * 0.7);
   }, []);
 
   return (
