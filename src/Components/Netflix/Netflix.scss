@@ -65,10 +65,7 @@ $duration: 0.7s;
         left: 21%;
         top: 0;
         transform: rotate(180deg);
-        animation-name: fading-lumieres-box;
-        animation-duration: 2 * $duration;
-        animation-delay: 0.6s;
-        animation-fill-mode: forwards;
+        animation: input-shadow 3.5 * $duration ease-in 0.5s forwards;
         .effect-brush {
           animation-name: brush-moving;
           animation-duration: 4 * $duration;
@@ -128,10 +125,6 @@ $duration: 0.7s;
           animation-delay: 0.5s;
         }
       }
-    }
-    .helper-1 {
-      box-shadow: 1px 1px 10px 1px var(--main-color),
-        -1px -1px 10px 1px var(--main-color);
     }
     [class*="helper-"] {
       position: absolute;
@@ -551,6 +544,19 @@ $duration: 0.7s;
   }
 }
 
+@keyframes input-shadow {
+  0% {
+    box-shadow: none;
+  }
+  70% {
+    box-shadow: 1px 1px 5px 1px var(--main-color),
+      -1px -1px 5px 1px var(--main-color);
+  }
+  100% {
+    box-shadow: 1px 1px 5px 1px var(--main-color),
+      -1px -1px 5px 1px var(--main-color);
+  }
+}
 @keyframes zoom-in-laptop {
   0% {
     transform: scale(1);

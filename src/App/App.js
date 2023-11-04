@@ -28,7 +28,7 @@ const App = () => {
       app.style.overflow = "unset";
       app.style.height = "unset";
       setVisibleNetflix(false);
-    }, 5000 * 0.7);
+    }, 4500 * 0.7);
   }, []);
 
   return (
