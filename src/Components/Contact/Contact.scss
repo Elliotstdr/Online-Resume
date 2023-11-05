@@ -1,0 +1,64 @@
+$main-color: #212121;
+$second-color: white;
+.modal-bug {
+  width: 500px !important;
+  .p-dialog-header {
+    padding: 0.25rem !important;
+    background: $main-color !important;
+    color: $second-color !important;
+    &-icon {
+      color: $second-color !important;
+      &:hover {
+        color: $main-color !important;
+        background: $second-color !important;
+      }
+      &:focus {
+        box-shadow: none !important;
+      }
+    }
+  }
+  .p-dialog-content {
+    background-color: $main-color !important;
+    padding: 0 1.5rem 1.5rem 1.5rem !important;
+  }
+  .bug__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__field {
+      color: $second-color;
+      width: 85%;
+      margin-bottom: 2rem;
+      h4 {
+        margin: 0.5rem 0;
+      }
+      .p-inputtextarea,
+      .p-inputtext {
+        color: $second-color;
+        background-color: $main-color;
+        border-color: #414141;
+        width: 100%;
+        &:hover {
+          border-color: inherit;
+        }
+        &:focus {
+          box-shadow: none !important;
+        }
+      }
+      &.file {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 730px) {
+  .modal-bug {
+    width: 95% !important;
+    .bug__form__field {
+      width: 100%;
+    }
+  }
+}

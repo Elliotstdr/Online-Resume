@@ -18,8 +18,10 @@
     text-decoration: none;
   }
   h2 {
-    padding: 0 !important
-    ;
+    padding: 0 !important;
+  }
+  span {
+    cursor: pointer;
   }
 }
 
@@ -28,7 +30,8 @@
     height: 440px;
     flex-direction: column;
     justify-content: center;
-    a {
+    a,
+    span {
       margin: 1rem 0;
     }
   }

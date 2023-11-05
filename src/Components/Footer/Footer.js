@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Footer.scss";
 import cv from "../../assets/CV.pdf";
 import { BsGithub } from "react-icons/bs";
 import { BiLogoLinkedinSquare } from "react-icons/bi";
 import { SiMinutemailer } from "react-icons/si";
+import Contact from "../Contact/Contact";
 
 const Footer = () => {
+  const [visibleMail, setVisibleMail] = useState(false);
   return (
     <div className="footer">
       <a
@@ -29,12 +31,15 @@ const Footer = () => {
       <a href={cv} target="_blank" rel="noopener noreferrer" className="cv">
         CV
       </a>
-      <a href="mailto:elliot.standre@gmail.com">
+      <span onClick={() => setVisibleMail(true)}>
         <SiMinutemailer
           style={{ fill: "url(#blue-gradient)" }}
           size={45}
         ></SiMinutemailer>
-      </a>
+      </span>
+      {visibleMail && (
+        <Contact visible={visibleMail} setVisible={setVisibleMail}></Contact>
+      )}
     </div>
   );
 };
