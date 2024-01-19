@@ -20,7 +20,7 @@ const Presentation = () => {
           J'ai maintenant plusieurs projets professionnels et personnels à mon
           actif. Je cherche toujours le défi technique dans mes projets
           personnels. Dans les projets professionnels c'est la collaboration,
-          l'entraide et la rigueur dans le code qui priment
+          l'entraide et la rigueur dans le code qui priment.
         </span>
         <h3>Développeur Full Stack</h3>
         <div className="presentation__icons">

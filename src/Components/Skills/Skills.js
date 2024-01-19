@@ -85,10 +85,10 @@ const Skills = () => {
             <div className="devicon-symfony-original">Symfony</div>
             <div className="devicon-php-plain">PHP</div>
             <div className="devicon-nodejs-plain">NodeJS</div>
+            <div className="devicon-express-original">Express</div>
             <div className="devicon-git-plain">Git</div>
             <div className="devicon-docker-plain">Docker</div>
             <div className="devicon-python-plain">Python</div>
-            <div className="pi pi-check-circle">Fortran</div>
             <div className="devicon-mysql-plain">SQL</div>
             <div className="devicon-mongodb-plain">MongoDB</div>
           </div>

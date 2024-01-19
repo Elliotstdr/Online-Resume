@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Pro.scss";
-import RP from "../../assets/RP_2.jpg";
-import MT from "../../assets/MT_2.jpg";
-import PEPSISE from "../../assets/PEPSISE_2.jpg";
+import RP from "../../assets/RP.PNG";
+import MT from "../../assets/Mines.PNG";
+import tuteur from "../../assets/fox.png";
 import Bubble from "../Bubble/Bubble";
 import { BubbleTextPro } from "../Bubble/BubbleText";
 import anime from "animejs";
@@ -73,7 +73,7 @@ const Pro = () => {
           image={RP}
           className="first"
           title="Reseau Pro"
-          content={BubbleTextPro[0]}
+          content={BubbleTextPro.rp}
         ></Bubble>
         <Bubble
           id={3}
@@ -82,16 +82,16 @@ const Pro = () => {
           image={MT}
           className="second"
           title="Mines Télécom"
-          content={BubbleTextPro[1]}
+          content={BubbleTextPro.mines}
         ></Bubble>
         <Bubble
           id={4}
           isHovered={isHovered}
           setIsHovered={setIsHovered}
-          image={PEPSISE}
+          image={tuteur}
           className="third"
-          title="PEPSISE"
-          content={BubbleTextPro[2]}
+          title="Tuteur Virtuel"
+          content={BubbleTextPro.tuteur}
         ></Bubble>
       </div>
     </>
