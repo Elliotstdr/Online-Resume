@@ -96,9 +96,9 @@ export const BubbleTextPro = {
       concours Mines-Télécom, ce qui demande notamment de gérer les dead lines
       que des milliers d'étudiants attendent. <br />
       <br />
-      J'ai activement participé à l'ensemble des évolution apportées sur le site
-      en 2023. J'ai eu l'opportunité d'être Lead Tech d'une important évolution
-      du site en 2024, encadrant 2 développeurs junior.
+      J'ai activement participé à l'ensemble des évolutions apportées sur le
+      site en 2023. J'ai eu l'opportunité d'être Lead Tech d'une importante
+      évolution du site en 2024, encadrant 2 développeurs junior.
     </>
   ),
   tuteur: (
